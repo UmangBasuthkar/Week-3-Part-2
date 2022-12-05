@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Exercise-2</title>
+	<style>
+		body {
+			background-color: black;
+		}
+		table {
+			background-image: linear-gradient(red, blue);
+			color: white;
+			height: 300px;
+			width: 300px;
+			text-align: center;
+			border-color: limegreen;
+		}
+		.btn {
+			border: 2px solid black;
+			background-color: white;
+			color: black;
+			padding: 14px 28px;
+			font-size: 16px;
+			cursor: pointer;
+		}
+		.chng {
+			border-color: #04AA6D;
+			color: green;
+		}
+		.chng:hover {
+			background-color: #04AA6D;
+			color: white;
+		}
+	</style>
+</head>
+<body>
+	<center>
+	<button class = "btn chng" id = "button" onclick="getTable()">Click Me to see the table</button>
+	<p id = "demo"></p>
+	</center>
+	<script>
+		function getTable()
+		{
+			const names = ["Anakin", "Obi-Wan", "Luke", "Leia"];
+			var text = "";
+			var i = 1;
+			for (var r = 0; r < names.length; r++)
+			{
+				text += '<tr>';
+				text += '<td>' + i 	+ '</td>';
+				text += '<td>' + names[r] + '</td>';
+				text += '</tr>';
+				i = i+1;
+			}
+			document.getElementById("demo").innerHTML = ('<table border = 1>' + text + '</table>');
+		}
+	</script>
+</body>
+</html>
